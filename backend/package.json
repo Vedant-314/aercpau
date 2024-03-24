@@ -1,4 +1,16 @@
 {
+  "main": "index.js",
+  "engines": {
+    "node": "16.15.0",
+    "npm": "8.5.5"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "client-install": "npm install --prefix client",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix client",
+    "start": "node app.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.1",
