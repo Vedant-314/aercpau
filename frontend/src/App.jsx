@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import CompletedStudies from "./Components/CompletedStudies";
 import OurStaff from "./Components/OurStaff";
-import TAC from "./Components/TAC";
 import OnGoingStudies from "./Components/OnGoingStudies";
 import MediaGallery from "./Components/MediaGallery";
 import ContactUs from "./Components/ContactUs";
@@ -18,7 +17,6 @@ function App() {
         <Route path="/cpstudies" element={<CompletedStudies />} />
         <Route path="/ogstudies" element={<OnGoingStudies />} />
         <Route path="/ourstaff" element={<OurStaff />} />
-        <Route path="/tac" element={<TAC />} />
         <Route path="/media" element={<MediaGallery />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/weblinks" element={<WebLinks />} />

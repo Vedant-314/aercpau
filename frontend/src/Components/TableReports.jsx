@@ -11,12 +11,12 @@ function TableReports() {
   }, []);
 
   const getFiles = async () => {
-    const sumResult = await axios.get("http://localhost:5000/get-report-files");
+    const sumResult = await axios.get("https://aercpau.onrender.com/get-report-files");
     setReportFiles(sumResult.data.data);
   };
 
   const showFile = (pdf) => {
-    window.open(`http://localhost:5000/files/${pdf}`, "_blank", "noreferrer");
+    window.open(`https://aercpau.onrender.com/files/${pdf}`, "_blank", "noreferrer");
   };
 
   const columns = [

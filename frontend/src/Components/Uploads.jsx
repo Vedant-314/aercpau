@@ -9,21 +9,6 @@ function Uploads() {
   const [fileType, setFileType] = useState("");
   const [author, setAuthor] = useState("");
   const [year, setYear] = useState("");
-  const [allFiles, setAllFiles] = useState(null);
-
-  useEffect(() => {
-    getFiles();
-  }, []);
-
-  const getFiles = async () => {
-    const result = await axios.get("http://localhost:5000/get-files");
-    console.log(result.data.data);
-    setAllFiles(result.data.data);
-  };
-
-  const showFile = (pdf) => {
-    window.open(`http://localhost:5000/files/${pdf}`, "_blank", "noreferrer");
-  };
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -35,14 +20,13 @@ function Uploads() {
     formData.append("year", year);
     console.log(title, file, fileType, author, year);
     const result = await axios.post(
-      "http://localhost:5000/upload-files",
+      "https://aercpau.onrender.com/upload-files",
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
       }
     );
-
-    console.log(result);
+    alert("Uploaded successfully!!")
   };
   return (
     <Layout>

@@ -9,7 +9,7 @@ app.use("/files", express.static("files"));
 
 require("./fileDetails");
 const fileDetailSchema = mongoose.model("fileDetails");
-
+const port = process.env.port || 5000
 const multer = require("multer");
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -108,6 +108,6 @@ app.get("/", async (req, res) => {
   res.send("success");
 });
 
-app.listen(5000, () => {
+app.listen(port, () => {
   console.log("Server started");
 });

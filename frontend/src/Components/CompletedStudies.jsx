@@ -12,13 +12,13 @@ function CompletedStudies() {
 
   const getFiles = async () => {
     const losResult = await axios.get(
-      "http://localhost:5000/get-listofstudies-files"
+      "https://aercpau.onrender.com/get-listofstudies-files"
     );
     setLosFiles(losResult.data.data);
   };
 
   const showFile = (pdf) => {
-    window.open(`http://localhost:5000/files/${pdf}`, "_blank", "noreferrer");
+    window.open(`https://aercpau.onrender.com/files/${pdf}`, "_blank", "noreferrer");
   };
 
   return (

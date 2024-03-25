@@ -15,18 +15,18 @@ function OnGoingStudies() {
 
   const getFiles = async () => {
     const prstResult = await axios.get(
-      "http://localhost:5000/get-presentstatus-files"
+      "https://aercpau.onrender.com/get-presentstatus-files"
     );
     setPrstFiles(prstResult.data.data);
 
     const publiResult = await axios.get(
-      "http://localhost:5000/get-publication-files"
+      "https://aercpau.onrender.com/get-publication-files"
     );
     setPubliFiles(publiResult.data.data);
   };
 
   const showFile = (pdf) => {
-    window.open(`http://localhost:5000/files/${pdf}`, "_blank", "noreferrer");
+    window.open(`https://aercpau.onrender.com/files/${pdf}`, "_blank", "noreferrer");
   };
 
   return (

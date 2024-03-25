@@ -32,9 +32,6 @@ function Layout({ children }) {
             <Link to={'/ourstaff'}>
               <li>Our Staff |</li>
             </Link>
-            <Link to={'/tac'}>
-              <li>TAC |</li>
-            </Link>
             <Link to={'/media'}>
               <li>Gallery |</li>
             </Link>
